@@ -15,6 +15,8 @@ from .utils import dedupPreservingOrder
 from .sources.kaitai import SerializingContext
 
 
+warn("We have moved from M$ GitHub to https://codeberg.org/KOLANICH-tools/MAPITagsScraper.py , read why on https://codeberg.org/KOLANICH/Fuck-GuanTEEnomo .")
+
 __all__ = ("fullPipeline",)
 
 def getTagsWithNonUniqueNames():
