@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=61.2.0", "wheel", "setuptools_scm[toml]>=3.4.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "MAPITagsScraper"
+authors = [{name = "KOLANICH"}]
+description = "Extracts MAPI tags identifiers from MS docs"
+readme = "ReadMe.md"
+keywords = ["MAPITagsScraper"]
+license = {text = "Unlicense"}
+classifiers = [
+	"Programming Language :: Python",
+	"Programming Language :: Python :: 3",
+	"Development Status :: 4 - Beta",
+	"Environment :: Other Environment",
+	"Intended Audience :: Developers",
+	"License :: Public Domain",
+	"Operating System :: OS Independent",
+	"Topic :: Software Development :: Libraries :: Python Modules",
+]
+requires-python = ">=3.4"
+dependencies = [
+	"WordSplitAbs @ https://codeberg.org/KOLANICH-libs/WordSplitAbs.py",
+	"commonmark @ git+https://github.com/readthedocs/commonmark.py",
+	"recommonmark @ git+https://github.com/readthedocs/recommonmark.git",
+	"docutils",
+	"dom_query @ git+https://gitlab.com/geusebi/dom_query.git",
+	"inflection @ git+https://github.com/jpvanhal/inflection.git",
+	"ruamel.yaml",
+]
+dynamic = ["version"]
+
+[project.optional-dependencies]
+header = ["simpleeval @ git+https://github.com/danthedeckie/simpleeval.git"]
+
+[project.urls]
+Homepage = "https://codeberg.org/KOLANICH-tools/MAPITagsScraper.py"
+
+[project.scripts]
+MAPITagsScraper = "MAPITagsScraper.__main__:CLI.run"
+
+[tool.setuptools]
+zip-safe = true
+include-package-data = false
+
+[tool.setuptools.packages]
+find = {namespaces = false}
+
+[tool.setuptools_scm]

@@ -1,0 +1,15 @@
+__pycache__
+*.pyc
+*.pyo
+/*.egg-info
+/cache
+#/mapi_tags.ksy
+/mapi_tags.py
+
+*.srctrlbm
+*.srctrldb
+build
+dist
+.eggs
+monkeytype.sqlite3
+/.ipynb_checkpoints
